@@ -1,23 +1,29 @@
-# Hello world JavaScript action
+# Semver validation action
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log. To learn how this action was built, see "[Creating a JavaScript action](https://help.github.com/en/articles/creating-a-javascript-action)" in the GitHub Help documentation.
+SEMVER validator
 
 ## Inputs
 
-### `who-to-greet`
+### `version`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** Version to validate. Default `"0.0.0"`.
 
 ## Outputs
 
-### `time`
+### `is-valid`
 
-The time we greeted you.
+Return if version is valid.
 
 ## Example usage
 
 ```yaml
-uses: actions/hello-world-javascript-action@master
+uses: actions/semver-validation-action@master
 with:
-  who-to-greet: 'Mona the Octocat'
+  version: '0.7.9'
+```
+
+```yaml
+uses: actions/semver-validation-action@master
+with:
+  version: '0.7.9-beta.1'
 ```

@@ -1,13 +1,13 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'SEMVER validator'
+description: 'Validate SEMVER version'
 inputs:
-  who-to-greet:  # id of input
+  version:  # id of input
     description: 'Who to greet'
     required: true
-    default: 'World'
+    default: '0.0.0'
 outputs:
-  time: # id of output
-    description: 'The time we we greeted you'
+  is-valid: # id of output
+    description: 'Return if the input version is valid'
 runs:
   using: 'node12'
   main: 'index.js'

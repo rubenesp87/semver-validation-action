@@ -6,20 +6,14 @@ SEMVER validator
 
 ### `version`
 
-**Required** Version to validate. Default `"0.0.0"`.
-
-## Outputs
-
-### `is-valid`
-
-Return if version is valid.
+**Required** Version to validate.
 
 ## Example usage
 
 ```yaml
 uses: actions/semver-validation-action@master
 with:
-  version: '0.7.9'
+  version: ${{ github.event.release.tag_name }}
 ```
 
 ```yaml

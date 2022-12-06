@@ -1,0 +1,19 @@
+name: Test action
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    name: Test SemVer validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Test action
+        uses: rubenesp87/semver-validation-action@master
+        with:
+          version: '0.7.9-beta.1'

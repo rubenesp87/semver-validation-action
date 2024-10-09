@@ -9,7 +9,7 @@ outputs:
   is-valid: # id of output
     description: 'Return if the input version is valid'
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'index.js'
 branding:
   icon: 'check-square'
